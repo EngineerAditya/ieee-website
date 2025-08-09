@@ -1,0 +1,93 @@
+/* Minimalist Navbar CSS */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  /* Softer border */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+  /* A bit smaller for a cleaner look */
+  display: block;
+  /* Removes extra space below the image */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base style for navigation text elements */
+.nav-links a,
+.dropdown-button {
+  text-decoration: none;
+  color: #333;
+  /* Dark grey instead of pure black */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* Ensures button uses the same font */
+  font-size: 1rem;
+}
+
+.nav-links a:hover,
+.dropdown-button:hover {
+  color: #000;
+  /* Simple hover effect */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1001;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  /* A subtle curve */
+  list-style: none;
+  margin-top: 0.5rem;
+  /* A little space from the button */
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  /* Subtle shadow */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f7f7f7;
+  /* Very light grey for hover */
+}
+
+/* Divider */
+/* In your Navbar.css file */
+.dropdown-divider {
+  border-top: 1px solid #eaeaea;
+  margin: 0.5rem 0;
+  /* Add padding to indent the "Affinities" text */
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  color: #666;
+  /* Make text a bit lighter than links */
+  font-weight: 500;
+  /* Make it semi-bold */
+}
