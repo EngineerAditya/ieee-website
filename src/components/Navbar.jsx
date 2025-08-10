@@ -53,7 +53,7 @@ export default function Navbar() {
             className="dropdown-button"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
-            Societies ▼
+            Societies
           </button>
 
           {isDropdownOpen && (
