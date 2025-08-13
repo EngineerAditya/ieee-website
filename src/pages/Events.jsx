@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
-import './pages_css/Events.css';
+
 
 export default function Events() {
   const [events, setEvents] = useState([]);
@@ -42,7 +42,7 @@ export default function Events() {
   if (loading) return <p className="loading">Loading events...</p>;
 
   return (
-    <div className="events-page">
+    <div className="events-page text-8xl">
       <h1 className="events-title">Events</h1>
       {events.length === 0 ? (
         <p className="no-events">No events found.</p>

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+/* Global dark background */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(145deg, #0f172a, #1e293b);
+  /* slate gradient */
+  color: #e2e8f0;
+  /* light gray text */
+  font-family: system-ui, sans-serif;
+}
+
+/* Optional: make scrollbars subtle in dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}

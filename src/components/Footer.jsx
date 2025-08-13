@@ -1,43 +1,45 @@
 import React from 'react';
-import './components_css/Footer.css';
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-content">
+    <footer className="bg-gray-900 text-gray-300 py-10">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
-        {/* Left Section */}
-        <div className="footer-section about">
+        {/* Left Section - IEEE Logo & About */}
+        <div className="text-left space-y-3">
           <a href="https://www.ieee.org/" target="_blank" rel="noopener noreferrer">
-            <img src="/ieee-logo.svg" alt="IEEE Logo" className="footer-logo" />
+            <img src="/ieee-logo.svg" alt="IEEE Logo" className="h-12 mb-3" />
           </a>
-          <p>
+          <p className="text-sm leading-relaxed">
             IEEE Student Branch, MIT Bengaluru — Inspiring innovation and technology for a better future.
+          </p>
+          <p className="text-sm">
+            📍 4HGR+26X, BSF Campus, Yelahanka Airforce Base, Bengaluru, Manchenahalli, Karnataka 560064
           </p>
         </div>
 
-        {/* Quick Links */}
-        <div className="footer-section links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/contact">Contact</a></li>
+        {/* Middle Section - Quick Links */}
+        <div className="text-center space-y-3">
+          <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+          <ul className="space-y-2">
+            <li><a href="/" className="hover:text-white transition">Home</a></li>
+            <li><a href="/about" className="hover:text-white transition">About</a></li>
+            <li><a href="/events" className="hover:text-white transition">Events</a></li>
+            <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
           </ul>
         </div>
 
-        {/* Follow Us */}
-        <div className="footer-section social">
-          <h4>Follow Us</h4>
-          <div className="social-icons">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        {/* Right Section - Social Links */}
+        <div className="text-right space-y-3">
+          <h4 className="text-lg font-semibold text-white">Follow Us</h4>
+          <div className="flex justify-end space-x-4 text-xl">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="mailto:ieee@mitb.ac.in" aria-label="Email">
+            <a href="mailto:ieee@mitb.ac.in" className="hover:text-yellow-400 transition">
               <i className="fas fa-envelope"></i>
             </a>
           </div>
@@ -45,10 +47,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Strip */}
-      <div className="footer-bottom">
-        <span>&copy; 2025 IEEE MIT Bengaluru. All rights reserved.</span>
-        <span className="divider"> | </span>
-        <span>Made with <span role="img" aria-label="love">❤️</span> by the IEEE Student Branch Team.</span>
+      <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-500">
+        &copy; 2025 IEEE MIT Bengaluru. All rights reserved. | Made with ❤️ by <a href='https://www.linkedin.com/in/adityasinha2006/' className="hover:text-amber-50" target="_blank" rel="noopener noreferrer">Aditya Sinha</a>.
       </div>
     </footer>
   );
