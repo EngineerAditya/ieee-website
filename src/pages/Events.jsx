@@ -42,29 +42,34 @@ export default function Events() {
   if (loading) return <p className="loading">Loading events...</p>;
 
   return (
-    <div className="events-page text-8xl">
-      <h1 className="events-title">Events</h1>
+    <div className="events-page">
+      <h1 className="events-title-text">Events</h1>
       {events.length === 0 ? (
         <p className="no-events">No events found.</p>
       ) : (
-        <div className="events-list">
+        <div className="events-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {events.map((event, idx) => (
-            <div key={idx} className="event-card">
-              <h2 className="event-title">{event.title}</h2>
-              <p className="event-date">{formatDateTime(event.date)}</p>
+            <div
+              key={idx}
+              className="event-card bg-slate-800/80 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 border border-slate-700 p-6 flex flex-col gap-4"
+            >
+              <h2 className="event-title text-2xl font-bold text-sky-400 mb-1">{event.title}</h2>
+              <p className="event-date text-sm text-slate-400">{formatDateTime(event.date)}</p>
 
               {event.image_url && (
                 <img
                   src={event.image_url}
                   alt={event.title}
-                  className="event-image"
+                  className="event-image w-full h-48 object-cover rounded-xl shadow mb-2"
                 />
               )}
 
               {event.venue && (
-                <p className="event-venue">📍 {event.venue}</p>
+                <p className="event-venue text-slate-300 text-sm flex items-center gap-1">
+                  <span role="img" aria-label="Venue">📍</span> {event.venue}
+                </p>
               )}
-              <p className="event-description">{event.description}</p>
+              <p className="event-description text-slate-200">{event.description}</p>
             </div>
           ))}
         </div>

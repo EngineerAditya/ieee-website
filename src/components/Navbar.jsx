@@ -53,31 +53,61 @@ export default function Navbar() {
                 Societies
               </button>
               {isDropdownOpen && (
-                <ul className="absolute top-full mt-2 bg-black/80 backdrop-blur-md rounded-lg border border-white/20 shadow-lg w-56">
+                <ul className="absolute top-full mt-2 bg-black/80 backdrop-blur-md rounded-lg border border-white/20 shadow-lg w-72">
                   <li>
-                    <Link to="/societies/antenna-propagation" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">Antenna and Propagation</Link>
+                    <Link to="/societies/antenna-propagation" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Antennas and Propagation Society
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/societies/cis" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">CIS</Link>
+                    <Link to="/societies/computer-society" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Computer Society
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/societies/cs" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">CS</Link>
+                    <Link to="/societies/computational-intelligence" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Computational Intelligence Society
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/societies/grss" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">GRSS</Link>
+                    <Link to="/societies/embs" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Engineering in Medicine and Biology Society
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/societies/photonics" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">Photonics</Link>
+                    <Link to="/societies/grss" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Geoscience and Remote Sensing Society
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/societies/ras" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">RAS</Link>
+                    <Link to="/societies/mtts" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Microwave Theory and Technology Society
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/societies/vts" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">VTS</Link>
+                    <Link to="/societies/photonics-society" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Photonics Society
+                    </Link>
                   </li>
-                  <li className="px-4 py-2 text-sm text-gray-400 border-t border-white/20">Affinities</li>
                   <li>
-                    <Link to="/societies/women-in-engineering" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">Women in Engineering</Link>
+                    <Link to="/societies/ras" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Robotics and Automation Society
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/societies/vts" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Vehicular Technology Society
+                    </Link>
+                  </li>
+
+                  {/* Affinities */}
+                  <li className="px-4 py-2 text-sm text-gray-400 border-t border-white/20">
+                    Affinities
+                  </li>
+                  <li>
+                    <Link to="/societies/women-in-engineering" onClick={handleLinkClick} className="block px-4 py-2 hover:bg-white/10">
+                      Women in Engineering
+                    </Link>
                   </li>
                 </ul>
               )}
